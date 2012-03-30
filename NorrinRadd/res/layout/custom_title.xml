@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/custom_title" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:orientation="vertical">
+
+	<!-- Left Text -->
+	<TextView android:id="@+id/title_left_text" android:textColor="@color/freebase_surfer_white"
+		android:layout_alignParentLeft="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:textSize="15sp"
+		android:singleLine="true" android:layout_alignWithParentIfMissing="true"
+		android:textStyle="bold" android:text="" />
+
+	<!-- Right Text -->
+	<TextView android:id="@+id/title_right_text"
+		android:textColor="@color/freebase_surfer_white" android:textStyle="bold"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_alignParentRight="true" android:layout_toRightOf="@+id/title_centre_text"
+		android:gravity="right" android:ellipsize="end" android:singleLine="true"
+		android:textSize="15sp" android:layout_marginLeft="10dp"
+		android:layout_alignWithParentIfMissing="true" android:text="" />
+
+	<!-- Centre Text -->
+	<TextView android:id="@+id/title_centre_text"
+		android:textColor="@color/freebase_surfer_white" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_alignParentTop="true"
+		android:gravity="center" android:ellipsize="end" android:textSize="15sp"
+		android:singleLine="true" android:layout_centerInParent="true"
+		android:textStyle="bold" android:text="" />
+
+</RelativeLayout>

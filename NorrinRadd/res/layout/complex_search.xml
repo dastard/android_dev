@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:cacheColorHint="#00000000" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <View
+            android:id="@+id/strut"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Query String Literal -->
+
+        <TextView
+            android:id="@+id/queryStringLiteral"
+            style="@style/Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@+id/strut"
+            android:text="Search Query:" >
+        </TextView>
+
+        <!-- Query String entry -->
+
+        <EditText
+            android:id="@+id/queryString"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/queryStringLiteral"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/strut"
+            android:hint="Enter Query String" >
+
+            <requestFocus>
+            </requestFocus>
+        </EditText>
+
+        <!-- Limit Literal -->
+
+        <TextView
+            android:id="@+id/limitLiteral"
+            style="@style/Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/queryStringLiteral"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_toLeftOf="@+id/strut"
+            android:text="Limit:" >
+        </TextView>
+
+        <!-- Limit entry -->
+
+        <EditText
+            android:id="@+id/limit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/limitLiteral"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/strut"
+            android:hint="Limit Results" >
+        </EditText>
+
+        <!-- blacklist literal -->
+
+        <TextView
+            android:id="@+id/blacklistLiteral"
+            style="@style/Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/limitLiteral"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_toLeftOf="@+id/strut"
+            android:text="Blacklist:" >
+        </TextView>
+
+        <!-- blacklist checkbox entry -->
+
+        <CheckBox
+            android:id="@+id/blacklist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/blacklistLiteral"
+            android:layout_below="@+id/blacklistLiteral"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/strut"
+            android:text="" />
+
+        <!-- Black Line One -->
+
+        <View
+            android:id="@+id/blackLine_one"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/blacklistLiteral"
+            android:layout_marginTop="20dp"
+            android:background="#000000" />
+
+        <!-- Select Prefixed or Stemmed or Neither -->
+
+        <RadioGroup
+            android:id="@+id/prefixedOrStemmed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/blackLine_one"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/prefixed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Prefixed" >
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/stemmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Stemmed" >
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/Neither"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Neither" >
+            </RadioButton>
+        </RadioGroup>
+
+        <!-- Black Line Two -->
+
+        <View
+            android:id="@+id/blackLine_two"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/prefixedOrStemmed"
+            android:layout_marginTop="20dp"
+            android:background="#000000" />
+
+        <!-- Type Selection List -->
+        <!-- Type Literal -->
+
+        <TextView
+            android:id="@+id/typeListLiteral"
+            style="@style/Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/blackLine_two"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Filter by Type(s)" >
+        </TextView>
+
+        <Button
+            android:id="@+id/typeList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/typeListLiteral"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:text="Type" >
+        </Button>
+
+        <RadioGroup
+            android:id="@+id/typeStrict"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/typeList"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/typeStrictAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="All" />
+
+            <RadioButton
+                android:id="@+id/typeStrictAny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Any" />
+
+            <RadioButton
+                android:id="@+id/typeStrictShould"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Should" />
+
+            <RadioButton
+                android:id="@+id/typeStrictNone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Neither" />
+        </RadioGroup>
+
+        <!-- Black Line Three -->
+
+        <View
+            android:id="@+id/blackLine_three"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/typeStrict"
+            android:layout_marginTop="20dp"
+            android:background="#000000" />
+
+        <!-- Domain Selection List -->
+        <!-- Domain Literal -->
+
+        <TextView
+            android:id="@+id/domainListLiteral"
+            style="@style/Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/blackLine_three"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Filter by Domain(s)" >
+        </TextView>
+
+        <Button
+            android:id="@+id/domainList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/domainListLiteral"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:text="Domain" >
+        </Button>
+
+        <RadioGroup
+            android:id="@+id/domainStrict"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/domainList"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/domainStrictAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="All" />
+
+            <RadioButton
+                android:id="@+id/domainStrictAny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Any" />
+
+            <RadioButton
+                android:id="@+id/domainStrictShould"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Should" />
+
+            <RadioButton
+                android:id="@+id/domainStrictNone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Neither" />
+        </RadioGroup>
+
+        <!-- Execute Search -->
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/domainStrict"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:text="Search" >
+        </Button>
+    </RelativeLayout>
+
+</ScrollView>

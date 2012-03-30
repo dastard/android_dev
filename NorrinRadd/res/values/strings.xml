@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Freebase Surfer</string>
+	<string name="app_label">Freebase Surfer</string>
+	<string name="search_hint">Search Freebase</string>
+
+</resources>

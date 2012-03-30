@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.free.base.surfer"
+    android:versionCode="17"
+    android:versionName="2.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+
+    <application
+        android:name=".FreebaseApplication"
+        android:icon="@drawable/freebase"
+        android:label="@string/app_name"
+        android:theme="@style/FreebaseWallpaper" >
+        <activity
+            android:name=".NorrinRadd"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".FreebaseTypes" >
+        </activity>
+        <activity android:name=".FreebaseTypeInstances" >
+        </activity>
+        <activity android:name=".FreebaseTopic" >
+        </activity>
+        <activity android:name=".FreebaseSimpleSearchExpand" android:configChanges="orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <!-- declare the default searchable Activity for the whole app -->
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value=".FreebaseSimpleSearchExpand" />
+
+        <activity android:name=".FreebaseTopicProperties" >
+        </activity>
+        <activity android:name=".FreebaseTopicPropertyValues" >
+        </activity>
+        <activity android:name=".FreebaseTopicPropertyValuesExpand" >
+        </activity>
+        <activity android:name=".FreebaseDomain" >
+        </activity>
+        <activity
+            android:name=".FreebaseComplexSearch"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,15 @@
+<resources>
+	<style name="FreebaseButtonBlue" parent="@android:style/Widget.Button">
+		<item name="android:textColor">@color/freebase_surfer_white</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textSize">15sp</item>
+		<item name="android:ellipsize">end</item>
+		<item name="android:padding">10dip</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:background">@drawable/button_blank_blue</item>
+		<item name="android:focusable">true</item>
+		<item name="android:clickable">true</item>
+	</style>
+</resources>
